@@ -23,8 +23,11 @@ $ mvn clean install && java -jar target/springServerlessFunctionLab-0.0.1-SNAPSH
 In other terminal
 
 ```bash
-curl http://localhost:8080/supply
+$ curl http://localhost:8080/supply
+$ curl -H "Content-Type: text/plain" http://localhost:8080/consume -d Guest
+$ curl -H "Content-Type: text/plain" http://localhost:8080/function -d Guest
 ```
 
 The suppy function in the HelloWorldController class, created this endpoint. 
 The spring-cloud-starter-function-web dependency provide necessary the dependencies to the project to run function in local environment
+Reference doc: https://docs.spring.io/spring-cloud-function/docs/3.1.1/reference/html/spring-cloud-function.html

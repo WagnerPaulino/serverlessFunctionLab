@@ -1,7 +1,5 @@
 package com.springServerlessFunctionLab.controller
 
-import java.util.function.Consumer
-import java.util.function.Supplier
 import org.springframework.context.annotation.Bean
 import org.springframework.stereotype.Component
 
@@ -9,7 +7,17 @@ import org.springframework.stereotype.Component
 class HelloWorldController {
 
     @Bean
-    fun supply(): Supplier<String> {
-        return Supplier { "Hello" }
+    open fun function(): (String) -> String {
+        return { input: String -> "Hello " + input }
+    }
+
+    @Bean
+    open fun consume(): (String) -> Unit {
+        return { input -> print("Hello " + input) }
+    }
+
+    @Bean
+    open fun supply(): () -> String {
+        return { "Hello" }
     }
 }
