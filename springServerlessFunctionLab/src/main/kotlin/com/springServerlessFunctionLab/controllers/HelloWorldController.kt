@@ -7,17 +7,17 @@ import org.springframework.stereotype.Component
 class HelloWorldController {
 
     @Bean
-    open fun function(): (String) -> String {
+    fun function(): (String) -> String {
         return { input: String -> "Hello " + input }
     }
 
     @Bean
-    open fun consume(): (String) -> Unit {
+    fun consume(): (String) -> Unit {
         return { input -> print("Hello " + input) }
     }
 
     @Bean
-    open fun supply(): () -> String {
+    fun supply(): () -> String {
         return { "Hello" }
     }
 }
