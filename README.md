@@ -30,4 +30,4 @@ $ curl -H "Content-Type: text/plain" http://localhost:8080/function -d Guest
 
 The suppy function in the HelloWorldController class, created this endpoint. 
 The spring-cloud-starter-function-web dependency provide necessary the dependencies to the project to run function in local environment
-Reference doc: https://docs.spring.io/spring-cloud-function/docs/3.1.1/reference/html/spring-cloud-function.html
+* Reference doc: https://docs.spring.io/spring-cloud-function/docs/3.1.1/reference/html/spring-cloud-function.html
